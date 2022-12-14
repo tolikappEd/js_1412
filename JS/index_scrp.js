@@ -1,24 +1,19 @@
+const date_n = new Date();
+let dtStr_n = date_n.getHours()+":"+date_n.getMinutes()+":"+date_n.getSeconds()+" _ "+date_n.getDay()+"."+date_n.getMonth()+"."+date_n.getFullYear();
+document.getElementById('Date_Sh').innerHTML = dtStr_n;
+  
+function subShow(){
+  if(document.getElementById('inpName').value!=""&&document.getElementById('inpMessage').value!=""){
 
-let uval = 0;
-document.getElementById('inp3.1').value = "Val 1";
-document.getElementById('inp3.2').value = "Val 2";
-
-function task1(){
-  let inpStuff = document.getElementById('inp1');
-  inpStuff.value = uval;
-  uval+=1;
-
-}
-
-function task2(){
- 
-  document.getElementById('task2_out').innerHTML = document.getElementById('inp2').value;
-}
-
-function task3(){
-  let inp1 = document.getElementById('inp3.1').value;
-  let inp2 = document.getElementById('inp3.2').value;
-  document.getElementById('inp3.1').value = inp2;
-  document.getElementById('inp3.2').value = inp1;
-
+  const date = new Date();
+  let dtStr = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+" _ "+date.getDay()+"."+date.getMonth()+"."+date.getFullYear();
+  document.getElementById('Date_Sh').innerHTML = dtStr;
+  document.getElementById('Name_Sh').innerHTML  = document.getElementById('inpName').value;
+  document.getElementById('inpName').value = "";
+  
+  document.getElementById('Text_Sh').innerHTML  = document.getElementById('inpMessage').value;
+  document.getElementById('inpMessage').value = "";
+  }else{
+    alert("You should put some more information !");
+  }
 }
