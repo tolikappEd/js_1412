@@ -1,0 +1,22 @@
+
+
+.task{
+display: inline-block;
+margin: 10px 20px;
+}
+.output{
+display: inline-block;
+
+width: 500px;
+height: 50px;
+background-color: white;
+font-size: 25pt;
+border: solid gray 1px;
+border-radius: 10px;
+}
+
+main{
+    display: flex;
+    background-color: rebeccapurple;
+    flex-direction: column;
+}
